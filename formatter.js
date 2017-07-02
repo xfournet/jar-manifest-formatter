@@ -20,7 +20,7 @@ var Formatter = (function() {
 
   function shouldFormat(name) {
     var names = ["Require-Bundle", "Bundle-ClassPath", "Embedded-Artifacts"];
-    return name.indexOf("-Package") !== -1 || names.indexOf(name) !== -1;
+    return name.indexOf("-Package") !== -1 || name.indexOf("-Capability") !== -1 || names.indexOf(name) !== -1;
   }
 
   exports.format = function (manifest, formatLists, sortLists, sortHeaders) {
